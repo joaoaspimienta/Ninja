@@ -1,0 +1,41 @@
+* {
+    background-color: black;
+  }
+  
+  .ninja {
+    display: flex;
+    max-width: 0;
+  }
+  
+  p {
+    color: white;
+    font-size: 18px;
+  }
+  
+  @keyframes aparece {
+    from {
+      opacity: 0;
+      transform: translate3d(-50px, -50px, 0)
+    } to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
+    }
+  }
+  
+  @keyframes sumidao {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
+    } to {
+      opacity: 0;
+      transform: translate3d(-50px, -50px, 0)
+    }
+  }
+  
+  .ninja {
+    animation: aparece .5s forwards;
+  }
+  
+  .ninja.sumido {
+    animation: sumidao .5s forwards;
+}
